@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PrivateRoute, PublicRoute } from "./hoc";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
@@ -20,7 +20,7 @@ import Location from "./pages/Locations/Location";
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route
           path="/msl-panel"
@@ -81,7 +81,7 @@ const App = () => {
           element={<PrivateRoute component={<CreateProduct />} />}
         />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
