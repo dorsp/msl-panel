@@ -17,11 +17,15 @@ import CreateProduct from "./pages/Products/CreateProduct";
 import Schedules from "./pages/Schedules";
 import CreateSchedule from "./pages/Schedules/CreateSchedule";
 import Location from "./pages/Locations/Location";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PublicRoute component={<Signin />} />} />
+        <Route
+          path="/msl-panel"
+          element={<PublicRoute component={<Signin />} />}
+        />
         <Route
           path="/home"
           element={<PrivateRoute component={<Dashboard />} />}
